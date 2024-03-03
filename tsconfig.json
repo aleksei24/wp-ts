@@ -9,5 +9,6 @@
     "strict": true,
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "extends": "@tsconfig/node16/tsconfig.json"
 }
