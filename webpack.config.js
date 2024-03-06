@@ -1,6 +1,8 @@
 const path = require('path');
 const { webpack } = require('webpack');
 const Dotenv = require('dotenv-webpack');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 
@@ -9,7 +11,14 @@ module.exports = {
 
   entry: './src/index.ts',
 
-  plugins: [new Dotenv()],
+  plugins: [
+    new Dotenv(),
+    new HTMLWebpackPlugin({
+      title: 'Webpack Boilerplate',
+      template: path.resolve(__dirname, './src/template.html'),
+      filename: 'index.html',
+    }),
+  ],
 
   module: {
     rules: [
