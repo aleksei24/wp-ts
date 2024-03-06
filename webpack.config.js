@@ -17,6 +17,7 @@ module.exports = {
       title: 'Webpack Boilerplate',
       template: path.resolve(__dirname, './src/template.html'),
       filename: 'index.html',
+      favicon: './src/img/fav.ico',
     }),
   ],
 
