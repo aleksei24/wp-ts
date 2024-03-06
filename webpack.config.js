@@ -30,7 +30,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 
-  devTool: 'inline-source-map',
+  devtool: 'inline-source-map',
 
   devServer: {
     historyApiFallback: true,
