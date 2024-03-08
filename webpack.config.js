@@ -3,6 +3,7 @@ const { webpack } = require('webpack');
 const Dotenv = require('dotenv-webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 
@@ -19,6 +20,8 @@ module.exports = {
       filename: 'index.html',
       favicon: './src/img/fav.ico',
     }),
+    new MiniCssExtractPlugin(),
+    new CleanWebpackPlugin(),
   ],
 
   module: {
@@ -30,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
   },
