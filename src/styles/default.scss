@@ -1,0 +1,75 @@
+$maxWidth: 120em;
+$minWidth: 20em;
+$contWidth: 100em;
+$md1: $contWidth;
+$md2: 93.75em;
+$md3: 62em;
+$md4: 48em;
+$md5: 30em;
+
+$fontFamily: 'Ubuntu';
+$bgColour: #ffffff;
+$colourFont: #151515;
+$btnColour: rgb(24, 22, 22);
+$btnBgColour: rgb(255, 123, 0);
+$transparentColour: transparent;
+$error: red;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: $minWidth;
+  position: relative;
+  color: $colourFont;
+}
+body {
+  background-color: $bgColour;
+  font-family: $fontFamily;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+input,
+button,
+textarea {
+  font-family: $fontFamily;
+}
+button {
+  cursor: pointer;
+  border-radius: 5px;
+}
