@@ -9,7 +9,8 @@
     "moduleResolution": "node",
     "strict": true,
     "sourceMap": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["DOM"]
   },
   "extends": "@tsconfig/node16/tsconfig.json"
 }
