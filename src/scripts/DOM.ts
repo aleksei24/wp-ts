@@ -1,9 +1,5 @@
-let printResult: HTMLElement | null
-printResult = document.querySelector('#log_two')
-let res: string
-res = msg
+const printResult = document.querySelector('#log_two') as HTMLElement
+const res: string = 'Hello from DOM.ts'
 
-// res = msg
-// printResult?.innerText = res
+printResult.innerText = res
 
-// printResult?.textContent?.toString = msg
