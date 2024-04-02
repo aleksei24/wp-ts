@@ -6,3 +6,4 @@ import './styles/view.scss';
 // scripts
 import './scripts/firstStep.ts'
 import './scripts/DOM.ts'
+import './scripts/array'
