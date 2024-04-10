@@ -1,6 +1,5 @@
 const myStrArr: string[] = ['grapes', 'lemon', 'apple', 'watermelon']
 myStrArr.unshift('ARRAY')
-myStrArr.join(' ')
 
 const printArr = document.querySelector('#arr') as HTMLElement
 
@@ -17,10 +16,10 @@ const printArr = document.querySelector('#arr') as HTMLElement
 // })
 
 for (let i = 0; i < myStrArr.length; i++) {
-  const el = myStrArr[i]
+  // const el = myStrArr[i]
   const content = document.createElement('span')
-  content.textContent = el
+  content.textContent = myStrArr[i].toString()
   printArr.appendChild(content)
 }
 
-// console.log(myStrArr);
+// console.log(myStrArr.toString());
