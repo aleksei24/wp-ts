@@ -24,7 +24,7 @@ FetchUsers().then(users => {
   for (let i = 0; i < users.length; i++) {
     const element = users[i];
     const contentPromise = document.createElement('p')
-    contentPromise.textContent = element.toString()
+    contentPromise.textContent = element.name.toString()
     pro.appendChild(contentPromise)
   }
 })
