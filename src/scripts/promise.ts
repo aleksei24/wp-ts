@@ -17,6 +17,14 @@ const FetchUsers = async (): Promise<User[]> => {
 
 type FetchUsersReturnType = Awaited<ReturnType<typeof FetchUsers>>
 
+const pro = document.querySelector('#pro') as HTMLElement
+
 FetchUsers().then(users => {
   console.log(users);
+  for (let i = 0; i < users.length; i++) {
+    const element = users[i];
+    const contentPromise = document.createElement('p')
+    contentPromise.textContent = element.toString()
+    pro.appendChild(contentPromise)
+  }
 })
