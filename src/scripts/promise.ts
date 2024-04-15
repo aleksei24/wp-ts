@@ -13,4 +13,10 @@ const FetchUsers = async (): Promise<User[]> => {
     })
   })
   return data
-} 
+}
+
+type FetchUsersReturnType = Awaited<ReturnType<typeof FetchUsers>>
+
+FetchUsers().then(users => {
+  console.log(users);
+})
