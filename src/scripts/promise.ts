@@ -1,7 +1,7 @@
 interface User {
   id: number,
   name: string,
-  aka: string,
+  username: string,
   email: string
 }
 
