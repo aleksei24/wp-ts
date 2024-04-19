@@ -1,7 +1,7 @@
 const myStrArr: string[] = ['grapes', 'lemon', 'apple', 'watermelon']
-myStrArr.unshift('ARRAY')
+const printArr = document.querySelector('#arrStr') as HTMLElement
 
-const printArr = document.querySelector('#arr') as HTMLElement
+myStrArr.unshift('tomato', 'plum')
 
 // for (const item of myStrArr) {
 //   const text = document.createElement('span')
@@ -9,17 +9,23 @@ const printArr = document.querySelector('#arr') as HTMLElement
 //   printArr.appendChild(text)
 // }
 
-// myStrArr.forEach(el => {
-//   const content = document.createElement('span')
-//   content.textContent = el
-//   printArr.appendChild(content)
-// })
-
-for (let i = 0; i < myStrArr.length; i++) {
-  // const el = myStrArr[i]
-  const content = document.createElement('span')
-  content.textContent = myStrArr[i].toString()
+myStrArr.forEach(el => {
+  const content = document.createElement('p')
+  content.textContent = el
   printArr.appendChild(content)
-}
+})
 
-// console.log(myStrArr.toString());
+// for (let i = 0; i < myStrArr.length; i++) {
+//   const el = myStrArr[i]
+//   const content = document.createElement('span')
+//   content.textContent = el.toString()
+//   printArr.appendChild(content)
+// }
+
+
+const elOfMyStrArr = document.createElement('span') as HTMLSpanElement
+printArr.appendChild(elOfMyStrArr)
+
+// printArr.textContent = `${myStrArr.at(2)}`
+
+// printArr.textContent = `${myStrArr.join('-')}`
