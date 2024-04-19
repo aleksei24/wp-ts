@@ -1,5 +1,5 @@
 const myStrArr: string[] = ['grapes', 'lemon', 'apple', 'watermelon']
-const printArr = document.querySelector('#arr') as HTMLElement
+const printArr = document.querySelector('#arrStr') as HTMLElement
 
 myStrArr.unshift('tomato', 'plum')
 
@@ -27,3 +27,5 @@ const elOfMyStrArr = document.createElement('span') as HTMLSpanElement
 printArr.appendChild(elOfMyStrArr)
 
 // printArr.textContent = `${myStrArr.at(2)}`
+
+// printArr.textContent = `${myStrArr.join('-')}`
