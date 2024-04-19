@@ -1,7 +1,7 @@
 const myStrArr: string[] = ['grapes', 'lemon', 'apple', 'watermelon']
 const printArr = document.querySelector('#arr') as HTMLElement
 
-const addElemBefore = myStrArr.unshift('tomato', 'plum')
+myStrArr.unshift('tomato', 'plum')
 
 // for (const item of myStrArr) {
 //   const text = document.createElement('span')
@@ -10,7 +10,7 @@ const addElemBefore = myStrArr.unshift('tomato', 'plum')
 // }
 
 myStrArr.forEach(el => {
-  const content = document.createElement('span')
+  const content = document.createElement('p')
   content.textContent = el
   printArr.appendChild(content)
 })
@@ -22,3 +22,8 @@ myStrArr.forEach(el => {
 //   printArr.appendChild(content)
 // }
 
+
+const elOfMyStrArr = document.createElement('span') as HTMLSpanElement
+printArr.appendChild(elOfMyStrArr)
+
+// printArr.textContent = `${myStrArr.at(2)}`
