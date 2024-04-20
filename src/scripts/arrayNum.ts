@@ -8,6 +8,11 @@ myNumArray.forEach(el => {
 });
 
 const arrMap = myNumArray.filter(n => n > 10).join(' ')
-const printRes = document.createElement('p')
-printRes.textContent = `mapped Arr: ${arrMap}`
-printNumArr.append(printRes)
+const printResOne = document.createElement('p')
+printResOne.textContent = `filtered Arr: ${arrMap}`
+printNumArr.append(printResOne)
+
+const arrReduce = myNumArray.reduce((acc, cur) => acc + cur, 0,)
+const printResTwo = document.createElement('span')
+printResTwo.textContent = `reduced Arr: ${arrReduce}`
+printNumArr.append(printResTwo)
