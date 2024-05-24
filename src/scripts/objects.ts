@@ -1,8 +1,12 @@
 const printObject = document.querySelector('#obj') as HTMLObjectElement
 
-function createCustomer(customer: {
-  name: string, age: number, visitDaily?: boolean
-}) {
+interface Customer {
+  name: string,
+  age: number,
+  visitDaily: boolean
+}
+
+function createCustomer(customer: Customer) {
   return `${customer.name}, ${customer.age}, ${customer.visitDaily}`
 }
 
