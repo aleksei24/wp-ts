@@ -1,6 +1,9 @@
 class Employee {
   fullTitle: string
-  constructor(jobTitle: string, lastName: string) {
+  constructor(
+    public jobTitle: string,
+    public lastName: string
+  ) {
     this.fullTitle = jobTitle + ' ' + lastName
   }
 }
