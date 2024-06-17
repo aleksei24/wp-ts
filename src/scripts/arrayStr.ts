@@ -10,8 +10,8 @@ myStrArr.unshift('tomato', 'plum')
 // }
 
 myStrArr.forEach(el => {
-  const content = document.createElement('p')
-  content.textContent = el
+  const content = document.createElement('span') as HTMLSpanElement
+  content.textContent = `${el} `
   printArr.appendChild(content)
 })
 
